@@ -1,0 +1,135 @@
+:root {
+    --background:  #9575CD;
+}
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+    max-width: 25rem;
+  }
+  
+  .card {
+    position: relative;
+    left: 0px;
+    width: 6rem;
+    border-radius: 1.2rem;
+    height: 30rem;
+    overflow: hidden;
+    background-color: var(--background);
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    flex: 0.25;
+  }
+  
+  .card img {
+    position: relative;
+    height: 30rem;
+    object-fit: cover;
+   
+  }
+  
+  .card:hover {
+    flex: 2;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+  /* Contenido bloqueado fullscreen */
+  .content-block {
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  /* Secciones en Pantalla completa */
+  .fullscreen-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #202020;
+  }
+  
+  /* Video */
+    .video-container {
+      position: relative;
+      min-height: calc(100vh);
+          max-width: 100%;
+      overflow: hidden;
+      margin: auto;
+    }
+    
+    .video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* color oscuro con transparencia */
+    }  
+    
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+    }
+  
+  /* Push Up */
+  .push-up-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 182, 193, 0.8); /* Rosa pastel con opacidad */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 999;
+  }
+  
+  .blur-content {
+    filter: blur(80px); /* Ajusta según tu preferencia */
+    transition: filter 0.5s ease; /* Transición gradual en el desenfoque */
+  }
+  
+  .heart-button {
+    background-color: #6200ea; /* Morado */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .heart-button:hover {
+    background-color: #64dd17; /* Cambia a verde al pasar el mouse */
+  }
